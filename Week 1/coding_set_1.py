@@ -14,7 +14,7 @@ print('This is a test of running Python code within a notebook.')
 # 255
 
 # Binary conversion:
-# 
-# 
-# 
-# 
+# 8 + 2 + 1 = 11
+# 1011
+# 64 + 1 = 65
+# 1000001
