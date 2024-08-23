@@ -24,3 +24,12 @@ print('This is a test of running Python code within a notebook.')
 # 11111111
 
 # Exercise 4:
+# Binary:
+# 101
+# 1111
+# 110010
+
+# Decimal conversion:
+#
+#
+#
