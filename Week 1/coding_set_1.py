@@ -5,5 +5,16 @@
 print('This is a test of running Python code within a notebook.')
 
 # Exercise 3:
-# ...
+# I know binary well, so this exercise wasn't troublesome.
 
+# Decimal numbers to convert:
+# 11
+# 65
+# 100
+# 255
+
+# Binary conversion:
+# 
+# 
+# 
+# 
