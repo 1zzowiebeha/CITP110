@@ -1,4 +1,4 @@
-"""Program for Exercise A, Exercise 3, and ..."""
+"""Code for Exercise A, Exercise 3, and Exercise 4."""
 
 # Exercise A:
 # I experienced no problems running this line of code.
