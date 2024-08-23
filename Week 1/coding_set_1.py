@@ -18,3 +18,5 @@ print('This is a test of running Python code within a notebook.')
 # 1011
 # 64 + 1 = 65
 # 1000001
+# 64 + 32 + 4 = 100
+# 1100100
