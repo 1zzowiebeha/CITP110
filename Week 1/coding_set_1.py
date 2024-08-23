@@ -31,5 +31,5 @@ print('This is a test of running Python code within a notebook.')
 
 # Decimal conversion:
 # 1 + 4 = 5
-#
-#
+# 1 + 2 + 4 + 8 = 15
+# 2 + 16 + 32 = 50
