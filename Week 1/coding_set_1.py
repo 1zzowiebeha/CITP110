@@ -1,10 +1,16 @@
 """Code for Exercise A, Exercise 3, and Exercise 4."""
 
-# Exercise A:
+###############
+# Exercise A: #
+###############
+
 # I experienced no problems running this line of code.
 print('This is a test of running Python code within a notebook.')
 
-# Exercise 3:
+###############
+# Exercise 3: #
+###############
+
 # I know binary well, so this exercise wasn't troublesome.
 
 # Decimal numbers to convert:
@@ -23,7 +29,10 @@ print('This is a test of running Python code within a notebook.')
 # 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255
 # 11111111
 
-# Exercise 4:
+###############
+# Exercise 4: #
+###############
+
 # Binary:
 # 101
 # 1111
