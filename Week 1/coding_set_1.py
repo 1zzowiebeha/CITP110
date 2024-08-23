@@ -30,6 +30,6 @@ print('This is a test of running Python code within a notebook.')
 # 110010
 
 # Decimal conversion:
-#
+# 1 + 4 = 5
 #
 #
