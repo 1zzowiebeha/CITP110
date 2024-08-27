@@ -7,8 +7,35 @@ import turtle
 
 def shape1():
     """Draw shape 1 from Figure 2-40."""
-    pass
-
+    
+    # Starting position
+    turtle.penup()
+    turtle.setpos(-300, 200)
+    
+    # First diamond
+    turtle.fillcolor(1, 1, 1)
+    turtle.begin_fill()
+    turtle.pendown()
+    turtle.setpos(-250, 250)
+    turtle.setpos(-200, 200)
+    turtle.setpos(-250, 150)
+    turtle.setpos(-300, 200)
+    turtle.end_fill()
+    
+    # Second start position
+    turtle.penup()
+    turtle.setpos(-200, 200)
+    
+    # Second diamond
+    turtle.fillcolor(1, 1, 1)
+    turtle.begin_fill()
+    turtle.pendown()
+    turtle.setpos(-150, 250)
+    turtle.setpos(-100, 200)
+    turtle.setpos(-150, 150)
+    turtle.setpos(-200, 200)
+    turtle.end_fill()
+    
 
 def shape2():
     """Draw shape 2 from Figure 2-40."""
@@ -36,6 +63,8 @@ def shape6():
     
     
 if __name__ == "__main__":
+    turtle.speed(0)
+    
     # Draw each shape.
     shape1()
     shape2()
