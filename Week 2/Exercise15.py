@@ -1,6 +1,6 @@
 """A program which reproduces the images depicted in
 Starting Out with Python by Tony Gaddis Haywood,
-Figure 2-40 via the turtle graphics library."""
+Chapter 2 Figure 2-40 via the turtle graphics library."""
 
 import turtle
 
@@ -109,13 +109,32 @@ def shape3():
     # Draw Triangle 2
     turtle.right(45)
     turtle.forward(85)
-    
-    turtle.penup()
 
     
 def shape4():
     """Draw shape 4 from Figure 2-40."""
-    pass
+ 
+    # Start pos for shape 4
+    turtle.penup()
+    turtle.setpos(100, 50)
+    
+    # Draw 5 circles
+    for repetition in range(5):
+        turtle.pendown()
+        turtle.circle(20)
+        
+        # This algorithm will make even circles
+        #   .. lower in height, and odd circles
+        #   .. higher in height, as is displayed
+        #   .. in the book figure's pattern.
+        if repetition % 2 == 0:
+            # Don't draw the position change
+            turtle.penup()
+            turtle.setpos(turtle.pos()[0] + 20, turtle.pos()[1] - 20)
+        else:
+            # Don't draw the position change
+            turtle.penup()
+            turtle.setpos(turtle.pos()[0] + 20, turtle.pos()[1] + 20)
     
     
 def shape5():
