@@ -67,25 +67,50 @@ def shape3():
     turtle.penup()
     turtle.setpos(-250, 50)
     
-    horizontal = 30
-    vertical = 120
-    # Draw parallelogram 1
+    # Draw Square 1
     turtle.pendown()
-    turtle.forward(horizontal)
-    turtle.left(130)
-    turtle.forward(vertical)
-    turtle.left(50)
-    turtle.forward(horizontal)
-    turtle.left(130)
-    turtle.forward(vertical)
+    for repetition in range(4):
+        turtle.forward(60)
+        turtle.left(90)
     
-    # Draw parallelogram 2
-    turtle.forward(vertical)
-    turtle.right(130)
-    turtle.forward(horizontal)
+    # Square 2 start pos
+    turtle.forward(60)
     
+    # Draw Square 2
+    for repetition in range(4):
+        turtle.forward(60)
+        turtle.right(90)
+        
+    # Draw line through squares
+    turtle.right(45)
+    # Meh I'm kind of lazy to use the pythagorean theorem
+    #   .. to calculate the correct hypotenuse length.
+    #   The numbers 85 & 170 look good enough.
+    turtle.forward(85)
+    turtle.right(180)
+    turtle.forward(170)
     
-    # Draw parallelogram 2
+    # Triangle 1 start pos
+    turtle.right(135)
+    turtle.forward(60)
+    
+    # Draw triangle 1
+    turtle.right(45)
+    # Same here. 85 is a hypotenuse which looks good,
+    #   .. but might not be mathematically perfect.
+    turtle.forward(85)
+
+    # Start pos for triangle 2
+    turtle.right(45)
+    turtle.forward(60)
+    turtle.right(90)
+    turtle.forward(60)
+    
+    # Draw Triangle 2
+    turtle.right(45)
+    turtle.forward(85)
+    
+    turtle.penup()
 
     
 def shape4():
