@@ -60,7 +60,10 @@ def shape2():
 
 def shape3():
     """Draw shape 3 from Figure 2-40."""
-    pass
+    
+    # Start position
+    turtle.penup()
+    turtle.setpos(-250, 50)
 
     
 def shape4():
