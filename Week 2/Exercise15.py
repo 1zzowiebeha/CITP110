@@ -147,12 +147,32 @@ def shape5():
     turtle.circle(20)
     
     turtle.penup()
-    turtle.setpos(-250,-160)
+    # Reset angle
+    turtle.setheading(90)
+    # Magic numbers that place the cursor
+    #   .. mostly in the center of the circle.
+    turtle.setpos(-264,-174)
     
     # Draw + sign
+    # Bottom
     turtle.pendown()
-    turtle.left(45)
     turtle.forward(100)
+    
+    # Top
+    turtle.right(180)
+    turtle.forward(200)
+    
+    # (back to center)
+    turtle.right(180)
+    turtle.forward(100)
+    
+    # Right
+    turtle.right(90)
+    turtle.forward(100)
+    
+    # To center then Left
+    turtle.right(180)
+    turtle.forward(200)
     
     
 def shape6():
