@@ -142,6 +142,10 @@ def shape5():
     turtle.penup()
     turtle.setpos(-250,-160)
     
+    # I could write the text a bit away from the
+    #   .. line so the text doesn't intersect with
+    #   .. the line, but I will leave this for now.
+    
     # Draw circle in the middle of + sign
     turtle.pendown()
     turtle.circle(20)
@@ -162,6 +166,7 @@ def shape5():
     # Top
     turtle.right(180)
     turtle.forward(200)
+    turtle.write("North")
     
     # (back to center)
     turtle.right(180)
@@ -170,10 +175,12 @@ def shape5():
     # Right
     turtle.right(90)
     turtle.forward(100)
+    turtle.write("East")
     
     # To center then Left
     turtle.right(180)
     turtle.forward(200)
+    turtle.write("West")
     
     
 def shape6():
