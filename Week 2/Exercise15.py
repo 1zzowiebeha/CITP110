@@ -60,28 +60,33 @@ def shape2():
 
 def shape3():
     """Draw shape 3 from Figure 2-40."""
-    # In these setpos type of shapes,
-    #   I think about the coordinates in my head,
-    #   .. and use a calculator to try and get the measurements to be equal.
+    # In this intricate and angled shape, it will be easier
+    # .. to specify angles via .right() and .left().
     
     # Start position
     turtle.penup()
     turtle.setpos(-250, 50)
     
+    horizontal = 30
+    vertical = 120
     # Draw parallelogram 1
     turtle.pendown()
-    turtle.setpos(-180, 50)
-    turtle.setpos(-240, 120)
-    turtle.setpos(-310, 120)
-    turtle.setpos(-250, 50)
+    turtle.forward(horizontal)
+    turtle.left(130)
+    turtle.forward(vertical)
+    turtle.left(50)
+    turtle.forward(horizontal)
+    turtle.left(130)
+    turtle.forward(vertical)
     
     # Draw parallelogram 2
-    turtle.forward(50)
-    turtle.right(30)
-    turtle.forward(50)
-    turtle.setpos(-180, 0)
-    turtle.setpos(-250, 0)
-    turtle.setpos(-410, 120)
+    turtle.forward(vertical)
+    turtle.right(130)
+    turtle.forward(horizontal)
+    
+    
+    # Draw parallelogram 2
+
     
 def shape4():
     """Draw shape 4 from Figure 2-40."""
