@@ -13,7 +13,7 @@ def shape1():
     turtle.setpos(-300, 200)
     
     # First diamond
-    turtle.fillcolor(1, 1, 1)
+    turtle.fillcolor(255, 255, 255)
     turtle.begin_fill()
     turtle.pendown()
     turtle.setpos(-250, 250)
@@ -27,7 +27,7 @@ def shape1():
     turtle.setpos(-200, 200)
     
     # Second diamond
-    turtle.fillcolor(1, 1, 1)
+    turtle.fillcolor(255, 255, 255)
     turtle.begin_fill()
     turtle.pendown()
     turtle.setpos(-150, 250)
@@ -42,6 +42,20 @@ def shape2():
     # Starting Position
     turtle.penup()
     turtle.setpos(150, 200)
+    
+    # Draw triangle 1
+    
+    turtle.fillcolor(255, 255, 255)
+    turtle.begin_fill()
+    turtle.pendown()
+    turtle.setpos(250, 200)
+    turtle.setpos(200, 250)
+    turtle.setpos(150, 200)
+    turtle.end_fill()
+    
+    # Draw triangle 2
+    turtle.setpos(200, 300)
+    turtle.setpos(250, 200)
 
 
 def shape3():
@@ -65,7 +79,14 @@ def shape6():
     
     
 if __name__ == "__main__":
+    # Set color mode to 0-255 instead of 0.0-1.0
+    turtle.colormode(255)
+    
+    # Set drawing to animate instantly
     turtle.speed(0)
+    
+    # Bluish background
+    turtle.bgcolor(255, 255, 244)
     
     # Draw each shape.
     shape1()
