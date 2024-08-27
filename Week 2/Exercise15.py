@@ -139,7 +139,20 @@ def shape4():
     
 def shape5():
     """Draw shape 5 from Figure 2-40."""
-    pass
+    turtle.penup()
+    turtle.setpos(-250,-160)
+    
+    # Draw circle in the middle of + sign
+    turtle.pendown()
+    turtle.circle(20)
+    
+    turtle.penup()
+    turtle.setpos(-250,-160)
+    
+    # Draw + sign
+    turtle.pendown()
+    turtle.left(45)
+    turtle.forward(100)
     
     
 def shape6():
