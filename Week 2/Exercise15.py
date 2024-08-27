@@ -130,11 +130,11 @@ def shape4():
         if repetition % 2 == 0:
             # Don't draw the position change
             turtle.penup()
-            turtle.setpos(turtle.pos()[0] + 20, turtle.pos()[1] - 20)
+            turtle.setpos(turtle.pos()[0] + 25, turtle.pos()[1] - 20)
         else:
             # Don't draw the position change
             turtle.penup()
-            turtle.setpos(turtle.pos()[0] + 20, turtle.pos()[1] + 20)
+            turtle.setpos(turtle.pos()[0] + 25, turtle.pos()[1] + 20)
     
     
 def shape5():
