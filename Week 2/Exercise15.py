@@ -157,6 +157,7 @@ def shape5():
     # Bottom
     turtle.pendown()
     turtle.forward(100)
+    turtle.write("South")
     
     # Top
     turtle.right(180)
