@@ -5,12 +5,12 @@ using advanced techniques like type hinting, regex examples, etc."""
 
 
 # This function uses type hints, specifically union types.
-def strip_unwanted_zeros(numeric: float | int) -> float | int:
+def strip_unwanted_zeros(numeric: float | int) -> str:
     r"""Remove trailing 0s from a float to turn it into an int representation.
     Removes all captured characters in ^(?:\d+)(\.0+)$ regex.
     
     We convert to a string to perform the character manipulations.
-    Then we return the correct numeric type back to the user.
+    Then we return a string to use as our percentage output.
     
     Ex. if we receive 45.00, we would like just 45.
         .. But if we receive 45.65, we want 45.65.
@@ -20,10 +20,11 @@ def strip_unwanted_zeros(numeric: float | int) -> float | int:
         
         # Only integer digits were found
         if stripped.isdigit():
-            return int(stripped)
+            return stripped # return string
         # A . character was detected, thus there are decimal digits
         else:
-            return float(stripped)
+            # Limit output to 2 decimal places
+            return f"{float(stripped):.2f}"
     # Do nothing for ints
     elif isinstance(numeric, int):
         return str(numeric)
@@ -51,5 +52,5 @@ if __name__ == "__main__":
             formatted_female_percent = strip_unwanted_zeros(females_percentage)
             
             print(f"\nTotal: {total}")
-            print(f"Males: {males}, {formatted_male_percent:.2f}%")
-            print(f"Females: {females}, {formatted_female_percent:.2f}%")
+            print(f"Males: {males}, {formatted_male_percent}%")
+            print(f"Females: {females}, {formatted_female_percent}%")
