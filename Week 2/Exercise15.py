@@ -185,7 +185,64 @@ def shape5():
     
 def shape6():
     """Draw shape 6 from Figure 2-40."""
-    pass
+    
+    # Start pos
+    turtle.penup()
+    turtle.setpos(130, -140)
+    turtle.setheading(0)
+    
+    # Draw 2 dashed lines with dot points at the ends
+    for line in range(2):
+        # Write line 2:
+        if line == 1:
+            turtle.penup()
+            turtle.setpos(130, -240)
+            turtle.pendown()
+        
+        turtle.dot(10)
+        
+        turtle.pendown()
+        turtle.forward(10)
+        
+        turtle.penup()
+        turtle.forward(10)
+        
+        turtle.pendown()
+        turtle.forward(20)
+        
+        turtle.penup()
+        turtle.forward(10)
+        
+        turtle.pendown()
+        turtle.forward(20)
+        
+        turtle.penup()
+        turtle.forward(10)
+        
+        turtle.pendown()
+        turtle.forward(10)
+        
+        turtle.dot(10)
+        
+    # Draw 2 side lines
+    turtle.setpos(220, -140)
+    turtle.penup()
+    turtle.setpos(130, -140)
+    turtle.pendown()
+    turtle.setpos(130, -240)
+    
+    # Draw 2 triangle hypotenuses
+    # Numbers are estimates and not mathematically accurate
+    turtle.setpos(220, -140)
+    turtle.penup()
+    turtle.setpos(220, -240)
+    turtle.pendown()
+    turtle.setpos(130, -140)
+    
+    # Draw dot in the middle of the square
+    turtle.penup()
+    turtle.setpos(175, -190)
+    turtle.dot()
     
     
 if __name__ == "__main__":
