@@ -16,10 +16,10 @@ if __name__ == "__main__":
         miles_driven = float(input("Please enter the miles you drove:\n> "))
         gallons_used = float(input("Please enter the gallons of gas your car used:\n> "))
     except ValueError:
-        print(f"\nThe value you entered was not a number. Shutting down...")
+        print(f"\nError: A value you entered was not a number.")
     else:
         if miles_driven < 0 or gallons_used < 0:
-            print("\nA value you entered was a negative number. Shutting down...")
+            print("\nError: A value you entered was a negative number.")
         else:
             mpg = miles_per_gallon(miles_driven, gallons_used)
             print(f"\nMiles per Gallon: {str(mpg)}")
