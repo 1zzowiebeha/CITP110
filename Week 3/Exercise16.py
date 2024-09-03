@@ -9,6 +9,10 @@ try:
 except ValueError:
     print("Error: The year you entered was not a number.")
 else:
+    # At first I combined the following two conditionals,
+    # .. (year % 100 == 0 and year % 400 == 0),
+    # .. but got incorrect results, so I read the directions
+    # .. more and added a new conditional tree under year % 100.
     if year % 100 == 0:
         if year % 400 == 0:
             leap_year = True
