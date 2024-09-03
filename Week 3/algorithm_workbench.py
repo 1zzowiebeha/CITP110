@@ -47,4 +47,4 @@ if amount1 > 10 and amount2 < 100:
     
     # I could have done an if-statement to check
     #   .. for which variable was greater.
-    #   .. This approach is simpler, less lines, and more pythonic
+    #   .. This approach is simpler, less lines, and more pythonic.
