@@ -11,4 +11,4 @@ for denominator in range(30, 0, -1):
     
     print(f"{numerator}/{denominator} = {product}")
     
-print("\nThe total is: ", total)
+print("\nThe total is:", total)
