@@ -33,7 +33,7 @@ DESIRABLE_DAILY_HOURS = 8
 total_slept_debt: float = 0
 
 for day in range(1, 8):
-    hours_slept = prompt_user("Day {day}: How many hours did you sleep?: ", float)
+    hours_slept = prompt_user(f"Day {day}: How many hours did you sleep?: ", float)
     sleep_debt = DESIRABLE_DAILY_HOURS - hours_slept
     
     # User slept more than 8 hours. There is no debt so clamp to 0
