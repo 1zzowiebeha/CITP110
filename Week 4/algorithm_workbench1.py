@@ -13,4 +13,4 @@ while product < 100:
     
     product += (numeric_input * 10)
     
-print("Final product:", product)
+print("\nFinal product:", product)
