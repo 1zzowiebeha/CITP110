@@ -1,6 +1,6 @@
 """Exercise #11 from our textbook."""
 
-# results in line 4 being smaller
+# results in line 4 being smaller:
 prompt = "Day {0} - How many bugs did you collect?: "
 total_bugs_caught: int = 0
 
