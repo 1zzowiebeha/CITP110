@@ -1,6 +1,6 @@
 """Exercise #1 from our textbook."""
 
-# results in line 4 being smaller:
+# results in line 7 being smaller:
 prompt = "Day {0} - How many bugs did you collect?: "
 total_bugs_caught: int = 0
 
@@ -24,7 +24,7 @@ for day in range(1,6):
             total_bugs_caught += day_catch
             break
 
-# A bug count less than zero doesn't make sense.
+# A total bug count less than zero doesn't make sense.
 # .. Let's assume the user made an error
 # .. and clamp it to zero.
 if total_bugs_caught < 0:
