@@ -18,21 +18,28 @@ def is_prime(input_num: int) -> bool:
     
     is_divisible_by_another = False
     
-    # Count backwards to test divisibility,
-    # .. from input_num down to 2 (since second range argument is exclusive)
-    for num in range(input_num, 1, -1):
+    # This test is purely to check divisibility by numbers
+    # .. between 2 and (input_num - 1). (second range arg is exclusive)
+    # If we include input_num, (input_num % num == 0) will always be True and
+    # .. so False will return.
+    # If we include 1, (input_num % 1 == 0) will always be True and
+    # .. so False will return.
+    # This is why self-divisibility & one-divisibility is checked
+    # .. further down.
+    for num in range(input_num - 1, 1, -1):
         if input_num % num == 0:
             return False
     
-    is_self_divisible = input_num % input_num == 0
-    # The user could enter zero (a non-prime), thus this check
-    # .. is important.
-    is_divisible_by_one = input_num % 1 == input_num
+    return True
+    # is_self_divisible = input_num % input_num == 0
+    # # The user could enter zero (a non-prime), thus this check
+    # # .. is important.
+    # is_divisible_by_one = input_num % 1 == input_num
     
-    if is_divisible_by_one and is_self_divisible:
-        return True
-    else:
-        return False
+    # if is_divisible_by_one and is_self_divisible:
+    #     return True
+    # else:
+    #     return False
 
 
 
