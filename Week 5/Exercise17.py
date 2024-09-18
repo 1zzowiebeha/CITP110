@@ -65,8 +65,6 @@ def is_prime(input_num: int) -> bool:
     if input_num < 0:
         return False
     
-    is_divisible_by_another = False
-    
     # This test is purely to check divisibility by numbers
     # .. between (input_num - 1) and 2. (second range arg is exclusive)
     # If we include a check for self-divisibility (range(input_num, 1, -1)),
@@ -83,15 +81,27 @@ def is_prime(input_num: int) -> bool:
     return True
 
 
-print("* Prime Number Checker *")
+# I import the is_prime() function in Exercise18
+# .. in order to re-use code efficiently.
+# When you import another file, it runs all the code in that
+# .. imported file.
+# I don't want to prompt the user for a number and do all the following stuff
+# .. in Exercise18, so I check if this file (Exercise17) is
+# .. the main file executed in the terminal (`python3 Exercise17.py`).
+# If it is the main file run, let's proceed with the following code.
+# Python assigned the global variable __name__ with "__main__"
+# .. if it's the main file executed.
+# Imported files have a different __name__ value if they weren't the main file executed.
+if __name__ == "__main__":
+    print("* Prime Number Checker *")
 
-# Prompt the user forever
-# .. (or until they press CTRL+C in the terminal for a KeyboardInterrupt error)
-while True:
-    user_input = prompt_user("\nPlease enter a number:\n> ", int)
-    is_user_input_prime = is_prime(user_input)
+    # Prompt the user forever
+    # .. (or until they press CTRL+C in the terminal for a KeyboardInterrupt error)
+    while True:
+        user_input = prompt_user("\nPlease enter a number:\n> ", int)
+        is_user_input_prime = is_prime(user_input)
 
-    if is_user_input_prime:
-        print(f"{user_input} is prime.")
-    else:
-        print(f"{user_input} is not prime.")
+        if is_user_input_prime:
+            print(f"{user_input} is prime.")
+        else:
+            print(f"{user_input} is not prime.")
