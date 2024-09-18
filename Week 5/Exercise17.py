@@ -89,7 +89,7 @@ def is_prime(input_num: int) -> bool:
 # .. in Exercise18, so I check if this file (Exercise17) is
 # .. the main file executed in the terminal (`python3 Exercise17.py`).
 # If it is the main file run, let's proceed with the following code.
-# Python assigned the global variable __name__ with "__main__"
+# Python assigns the global variable __name__ with "__main__"
 # .. if it's the main file executed.
 # Imported files have a different __name__ value if they weren't the main file executed.
 if __name__ == "__main__":
