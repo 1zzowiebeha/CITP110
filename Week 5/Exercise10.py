@@ -1,4 +1,4 @@
-"""Exercise #10 from our textbook."""
+"""Exercise #10 from Chapter 5 of our textbook."""
 
 from typing import Any 
 

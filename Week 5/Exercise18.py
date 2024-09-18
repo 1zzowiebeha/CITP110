@@ -1,4 +1,4 @@
-"""Exercise #18 from our textbook."""
+"""Exercise #18 from Chapter 5 of our textbook."""
 
 # Modules allow us to re-use code efficiently.
 # Read the following super dense and scary sources if you dare!
