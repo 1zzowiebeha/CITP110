@@ -75,6 +75,7 @@ def is_prime(input_num: int) -> bool:
     # .. and so False will always return.
     # If we include a check for 1 divisibility,
     # .. (input_num % 1 == 0) will always be True and so False will always return.
+    # For further fun and understanding, use your IDE's debugger to learn more! :) 
     for num in range(input_num - 1, 1, -1):
         if input_num % num == 0:
             return False
