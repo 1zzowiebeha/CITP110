@@ -3,7 +3,7 @@
 from typing import Any
 
 
-# Note: Re-used function from last week
+# Note: Re-used function from last week.
 # My type hinting skills aren't the greatest, but this is a good start
 # .. for a function signature:
 def prompt_user(question: str, cast_type: Any) -> Any:
@@ -61,18 +61,20 @@ def is_prime(input_num: int) -> bool:
     # Must be positive.
     # If we wanted to include negative numbers as prime candidates,
     # .. we could check for positivity and use a reversed range function
-    # .. to count up to 2 from the negative number.
+    # .. to count up to -2 from the negative number.
     if input_num < 0:
         return False
     
     is_divisible_by_another = False
     
     # This test is purely to check divisibility by numbers
-    # .. between 2 and (input_num - 1). (second range arg is exclusive)
-    # If we include input_num, (input_num % num == 0) will always be True and
-    # .. so False will return.
-    # If we include 1, (input_num % 1 == 0) will always be True and
-    # .. so False will return.
+    # .. between (input_num - 1) and 2. (second range arg is exclusive)
+    # If we include a check for self-divisibility (range(input_num, 1, -1)),
+    # .. (input_num % num == 0) will always be True
+    # .. (except for an input of 1, since range(1,1-1) has no items)
+    # .. and so False will always return.
+    # If we include a check for 1 divisibility,
+    # .. (input_num % 1 == 0) will always be True and so False will always return.
     for num in range(input_num - 1, 1, -1):
         if input_num % num == 0:
             return False
@@ -83,7 +85,7 @@ def is_prime(input_num: int) -> bool:
 print("* Prime Number Checker *")
 
 # Prompt the user forever
-# .. (or until they press CTRL+C for a KeyboardInterrupt)
+# .. (or until they press CTRL+C in the terminal for a KeyboardInterrupt error)
 while True:
     user_input = prompt_user("\nPlease enter a number:\n> ", int)
     is_user_input_prime = is_prime(user_input)
