@@ -48,7 +48,7 @@ def is_prime(input_num: int) -> bool:
         1. Number must be divisible by itself.
         2. Number must be divisible by one.
         3. Number must return a remainder when divided by
-            another number.
+            numbers lesser than itself and greater than 1.
         4. Number must be positive.
     """
     
