@@ -56,3 +56,41 @@ for i in range(900):
 
 The else only runs if execution of the loop ended without the use of `break`.
 If there is no `break` statement, the else is not a useful control flow.
+
+# Files
+
+file.seek(bytes_forward) -- move the cursor by the number of bytes given
+file.write() -- write the whole file
+rstrip() -- remove \n from line
+
+file.read() -- read the whole file into memory
+file.readline() -- read the next line (moves the cursor forward)
+
+
+# File modes
+
++
+    add a newline to each write
+w
+    overwrite the entire file if it exists
+    write everything at once to a new file
+a
+    append new lines to an existing file
+    create a new file to append to if one doesn't exist
+    
+
+readline() returns an empty string
+when it attempts to read farther than the
+maximum number of lines
+
+Numbers must be converted to strings before
+being written (this usually occurs automatically
+with f string so idk about regular stuff ill have to test)
+
+# Open multiple files at once
+
+Heeyyyaaa
+
+with open('file1.txt', 'r') as input_file,
+     open('file1.txt', 'w') as output_file:
+    # do work here
