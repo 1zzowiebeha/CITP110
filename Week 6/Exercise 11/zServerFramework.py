@@ -117,6 +117,7 @@ def startServer(page_template: str,
             
 
 class Template:
+    """Simple template class with rendering."""
     def __init__(self, template: str) -> None:
         self.template = template
     
