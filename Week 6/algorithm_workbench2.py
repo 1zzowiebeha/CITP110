@@ -1,0 +1,1 @@
+"""Algorithm workbench #2 from Chapter 6 in our textbook."""
