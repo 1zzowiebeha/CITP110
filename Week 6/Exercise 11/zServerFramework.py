@@ -32,7 +32,10 @@ TEMPLATE_404 = """\
 # CustomWebServer. Figuring this out is tricky
 # .. due to how the class is consumed by HTTPServer.
 
-# a little too stateful for my liking, but it works for now.
+# I could also make a static folder for the user to easily
+# edit 404 pages and add more templates
+
+# A little too stateful for my liking, but it works for now.
 page_data = {}
 
 class CustomWebServer(BaseHTTPRequestHandler):        

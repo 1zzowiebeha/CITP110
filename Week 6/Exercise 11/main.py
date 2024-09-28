@@ -1,3 +1,4 @@
+"""Entry point to zServer."""
 from zServerFramework import Template, startServer
 
 TEMPLATE_HTML = """\
@@ -34,4 +35,5 @@ if __name__ == "__main__":
     
     rendered_template = template.render(context)
      
+    # Start web server
     startServer(rendered_template)
