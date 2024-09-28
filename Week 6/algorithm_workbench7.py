@@ -1,4 +1,4 @@
-"""Algorithm workbench #7 from Chapter 6 in our textbookl."""
+"""Algorithm workbench #7 from Chapter 6 in our textbook."""
 
 import os
 
