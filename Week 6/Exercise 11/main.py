@@ -1,5 +1,5 @@
-"""Entry point to zServer."""
-from zServerFramework import Template, startServer
+"""Entry point file for the server."""
+from miniFramework import Template, startServer
 
 TEMPLATE_HTML = """\
 <!DOCTYPE HTML>

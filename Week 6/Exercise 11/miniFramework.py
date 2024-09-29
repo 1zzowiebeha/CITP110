@@ -1,4 +1,4 @@
-"""Custom Webserver Mini Framework
+"""Super Simple Web Framework
 author: Zowie
 license: MIT
 """
@@ -6,6 +6,7 @@ license: MIT
 import sys
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from http import HTTPStatus
+from typing import Dict, Any
 
 TEMPLATE_404 = """\
 <!DOCTYPE HTML>
@@ -36,10 +37,10 @@ TEMPLATE_404 = """\
 # edit 404 pages and add more templates
 
 # A little too stateful for my liking, but it works for now.
-page_data = {}
+page_data: dict = {}
 
 class CustomWebServer(BaseHTTPRequestHandler):        
-    def do_GET(self):
+    def do_GET(self) -> None:
         if self.path == "/":
             self.send_response(200)
             self.send_header("Content-type", "text/html")
@@ -57,7 +58,7 @@ class CustomWebServer(BaseHTTPRequestHandler):
                 print(line)
                 self.wfile.write(bytes(line, "utf-8"))
                 
-    def log_message(self, format, *args):
+    def log_message(self, format: str, *args) -> None:
         """Log an arbitrary message.
 
         This is used by all other logging functions.  Override
@@ -92,7 +93,7 @@ class CustomWebServer(BaseHTTPRequestHandler):
 def startServer(page_template: str,
                 host_name: str = "localhost",
                 server_port: int = 8000,
-                error_template: str = TEMPLATE_404):
+                error_template: str = TEMPLATE_404) -> None:
     
     # page_template is a required arg
     page_data['page_template'] = page_template
@@ -124,7 +125,7 @@ class Template:
     def __init__(self, template: str) -> None:
         self.template = template
     
-    def render(self, context: dict) -> str:
+    def render(self, context: Dict[str, Any]) -> str:
         """Render the template variables with the given context."""
         return self.template.format(
             **context
