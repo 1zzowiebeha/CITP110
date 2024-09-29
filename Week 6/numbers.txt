@@ -1,0 +1,11 @@
+The domain provided in the book no longer exists.
+I've written numbers here to provide output to the script:
+
+4
+5
+6
+7
+1
+2323
+5235
+12
