@@ -39,7 +39,7 @@ TEMPLATE_404 = """\
 # A little too stateful for my liking, but it works for now.
 page_data: dict = {}
 
-class CustomWebServer(BaseHTTPRequestHandler):        
+class CustomVCLogic(BaseHTTPRequestHandler):        
     def do_GET(self) -> None:
         if self.path == "/":
             self.send_response(200)
@@ -102,7 +102,7 @@ def startServer(page_template: str,
     server_address = (host_name, server_port)
     webServer = HTTPServer(
         server_address,
-        CustomWebServer
+        CustomVCLogic
         # lambda *args, **kwargs: CustomWebServer(
         #     *args, page_template=page_template,
         #     error_template=error_template, **kwargs)
