@@ -29,8 +29,8 @@ TEMPLATE_404 = """\
 </html>
 """
 
-# I can improve this to make it somehow included within
-# CustomWebServer. Figuring this out is tricky
+# I can improve this to make it somehow include it within
+# CustomVCLogic. Figuring this out is tricky
 # .. due to how the class is consumed by HTTPServer.
 
 # I could also make a static folder for the user to easily
@@ -39,8 +39,10 @@ TEMPLATE_404 = """\
 # A little too stateful for my liking, but it works for now.
 page_data: dict = {}
 
-class CustomVCLogic(BaseHTTPRequestHandler):        
+class CustomVCLogic(BaseHTTPRequestHandler): 
+    """Custom view and controller logic to hand off to the webserver."""       
     def do_GET(self) -> None:
+        """Handle response to GET requests."""
         if self.path == "/":
             self.send_response(200)
             self.send_header("Content-type", "text/html")
@@ -94,7 +96,7 @@ def startServer(page_template: str,
                 host_name: str = "localhost",
                 server_port: int = 8000,
                 error_template: str = TEMPLATE_404) -> None:
-    
+    """Start the webserver with the view and controller logic."""
     # page_template is a required arg
     page_data['page_template'] = page_template
     page_data['error_template'] = error_template
