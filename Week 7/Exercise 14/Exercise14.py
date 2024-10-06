@@ -36,7 +36,9 @@ def get_csv_values(csv_path: str) -> list:
             line_values = line.split(',')
             # Strip whitespace
             for index, value in enumerate(line_values):
-                line_values[index] = value.strip()
+                # Convert to float to avoid
+                # .. display issues with matplotlib
+                line_values[index] = float(value.strip())
 
             values.append(line_values)
             
@@ -50,11 +52,10 @@ if __name__ == "__main__":
     # Get first row of multi-dimentional array
     values = get_csv_values('expenses.csv')[0]
     
-    print()
-    print(categories, values)
-    
-    # fig, ax = plt.subplots(figsize=(5, 2.7), layout='constrained')
+    fig, ax = plt.subplots(figsize=(5, 2.7), layout='constrained')
+    ax.set_title('Expense history')
 
-    # ax.bar(categories, values)
+    ax.bar(categories, values)
     
+    plt.show()
     # yay
