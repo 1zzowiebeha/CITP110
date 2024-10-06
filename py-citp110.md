@@ -94,3 +94,13 @@ Heeyyyaaa
 with open('file1.txt', 'r') as input_file,
      open('file1.txt', 'w') as output_file:
     # do work here
+    
+    
+# List and Tuples
+
+Tuples are faster for python to process, since they are immutable.
+
+.sort() -- sort a list by ascending or descending order
+.remove(value) -- remove the first occurence of value in the list (ltr)
+
+del my_list[2] -- remove an item of a list based on its index
