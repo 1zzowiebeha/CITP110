@@ -1,6 +1,5 @@
 """Exercise 11 from Chapter 7 of our textbook."""
 
-
 # magic_square = [
 #     [4,9,2],
 #     [3,5,7],
