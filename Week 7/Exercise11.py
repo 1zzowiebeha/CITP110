@@ -1,6 +1,5 @@
 """Exercise 11 from Chapter 7 of our textbook."""
 
-from string import Formatter
 
 # magic_square = [
 #     [4,9,2],
@@ -8,25 +7,25 @@ from string import Formatter
 #     [8,1,6]
 # ]
 
-class UnseenFormatter(Formatter):
-    """Custom formatter to replace string.format().
-    Allows us to use default values if a value doesn't exist."""
-    def get_value(self, key, args, kwds):
-        if isinstance(key, str):
-            try:
-                return kwds[key]
-            except KeyError:
-                return key
-        else:
-            return Formatter.get_value(key, args, kwds)
 
-
-fmt = UnseenFormatter()
-square_display = """\
-[{ }, { }, { }],
-[{ }, { }, { }],
-[{ }, { }, { }]
+square_display_text = """\
+[{0}, {1}, {2}],
+[{3}, {4}, {5}],
+[{6}, {7}, {8}]
 """
+
+def format_square_display_text(args: list):
+    """Format the square display with the user's arguments."""
+    # Add an 'x' to indicate where the user's
+    #   next input will go.
+    if len(args) < 9:
+        args.append('x')
+    
+    # Fill blank values with spaces
+    while len(args) < 9:
+        args.append(' ')
+        
+    return square_display_text.format(*args)
 
 
 if __name__ == "__main__":
@@ -45,23 +44,15 @@ if __name__ == "__main__":
     # Take in magic square
     for row in range(3):
         for col in range(3):
-            
-            try:
-                user_inputs.remove('x')
-            except ValueError:
-                pass
-            
-            if len(user_inputs) != 9:
-                user_inputs.append('x')
-            
-            # now to fix the display:
-            print(fmt.format(square_display, user_inputs))
+            # Send a copy of the list so we don't
+            #   mutate user_inputs within the format function.
+            print(format_square_display_text(user_inputs[:]))
             
             while True:
                 try:
                     number = int(input("> "))
                 except ValueError:
-                    print("Error: Input was not a number.")
+                    print("Error: Input was not a number.\n")
                 else:
                     user_inputs.append(number)
                     magic_square[row].append(number)
@@ -92,6 +83,7 @@ if __name__ == "__main__":
             a_value_not_equal = True
 
     # Output
+    print('\n' + format_square_display_text(user_inputs[:]))
     if a_value_not_equal:
         print("Magic square sums not equal!")
     else:
