@@ -1,9 +1,13 @@
 """Exercise 11 from Chapter 7 of our textbook."""
 
+# Example of a magic square and its sums:
 # magic_square = [
-#     [4,9,2],
-#     [3,5,7],
-#     [8,1,6]
+#     [4,9,2], # - 15
+#     [3,5,7], # - 15
+#     [8,1,6]  # - 15
+#      | | | \
+#     15 | 15 \
+#        15    15
 # ]
 
 
@@ -20,7 +24,7 @@ def format_square_display_text(args: list):
     if len(args) < 9:
         args.append('x')
     
-    # Fill blank values with spaces
+    # Fill blank values with spaces.
     while len(args) < 9:
         args.append(' ')
         
@@ -47,6 +51,7 @@ if __name__ == "__main__":
             #   mutate user_inputs within the format function.
             print(format_square_display_text(user_inputs[:]))
             
+            # Prompt until correct input type is provided.
             while True:
                 try:
                     number = int(input("> "))
@@ -57,7 +62,7 @@ if __name__ == "__main__":
                     magic_square[row].append(number)
                     break
 
-    # Sum all rows, columns, and the diagonal
+    # Sum all rows, all columns, and the diagonal:
     row_sums = [sum(row) for row in magic_square]
 
     col_sums = []
