@@ -11,7 +11,7 @@
 # ]
 
 
-square_display_text = """\
+SQUARE_DISPLAY_TEXT = """\
 [{0}, {1}, {2}],
 [{3}, {4}, {5}],
 [{6}, {7}, {8}]
@@ -28,7 +28,7 @@ def format_square_display_text(args: list):
     while len(args) < 9:
         args.append(' ')
         
-    return square_display_text.format(*args)
+    return SQUARE_DISPLAY_TEXT.format(*args)
 
 
 if __name__ == "__main__":
