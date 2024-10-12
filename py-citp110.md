@@ -104,3 +104,12 @@ Tuples are faster for python to process, since they are immutable.
 .remove(value) -- remove the first occurence of value in the list (ltr)
 
 del my_list[2] -- remove an item of a list based on its index
+
+
+# String methods
+
+Invalid splice indices do not raise an error.
+This is because it rolls over/ends at the start and finish, thus there are no invalid indices.
+
+a = 'asdjasld'
+a[-12414124:89128048080:44]
