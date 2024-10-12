@@ -1,0 +1,1 @@
+"""Exercise 1 from Chapter 8 of our textbook."""
