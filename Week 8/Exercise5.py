@@ -8,6 +8,12 @@ Enter a phone number in alphanumeric
 or number values in the format XXX-XXXX-XXXX:
 > """
 
+# Regular Expression Language is cryptic in appearance
+# but is a useful way to validate input.
+# It is not so suitable as a programming language parser.
+# e.g if you want to parse and validate HTML/BBCode.
+# (you can try and succeed (to an extent), but it takes complete mastery and
+#       actual parsers will take a lot less time to develop)
 PHONE_REGEX_PATTERN = r"^\d{3}-[\dA-z]{3}-[\dA-z]{4}$"
 
 PHONE_NUMBER_CODES = {
