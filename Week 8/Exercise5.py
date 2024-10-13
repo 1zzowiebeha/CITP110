@@ -21,6 +21,7 @@ PHONE_NUMBER_CODES = {
     'wxyz': 9,
 }
 
+
 def telephone_to_numeric(phone_number: str) -> str:
     """Parse a telephone number (alphanumeric chars or numeric digits),
     and return a numeric phone number."""
