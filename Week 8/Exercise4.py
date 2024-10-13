@@ -58,7 +58,7 @@ def string_to_morse_code(message: str) -> str:
        
         for key in MORSE_CODES.keys():
                 if char == key:
-                    # Change alphabet character to corresponding number
+                    # Change alphabet character to corresponding morse code value
                     chars[index] = MORSE_CODES[key]
     
     # Concat all chars into one string
