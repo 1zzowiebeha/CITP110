@@ -3,8 +3,8 @@
 import os
 
 
-# UNIQUE storage (only one occurence can exist in storage)
-# UNIQUE retrieval (only one occurence is found)
+# UNIQUE storage (only one occurrence can exist in storage)
+# UNIQUE retrieval (only one occurrence is found)
 #       For this case, I would use regex (.* )|( .*)
 #       Unique matches will be stored.
 def display_unique_words():
