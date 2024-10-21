@@ -162,4 +162,134 @@ Dictionary Merge Operator (|)
     for the second operand (dict2 in the example case) will be kept.
     
 Dictionary Update Operator (|=)
+    Combine both operands on either side of the operator into one dictionary,
+    and assign the result to the operand variable on the left.
     
+# Dictionary comprehension
+
+Expression that generates key value pairs within a dictionary.
+Used as a compact way to write for loops/generators.
+
+Copy a dictionary:
+
+d1 = {...}
+d2 = {k:v for k,v in d1.items()}
+
+# Sets
+
+Collection that acts like a mathematical set
+
+Elements can be of different types
+
+Discards duplicates
+
+set() accepts any iterable
+
+set(string)
+    make a set containing each character in the string
+    
+set(list|tuple)
+    make a set with all list|tuple elements
+    
+.remove(element)
+    raise KeyError if item not found
+    remove the element if found
+
+.discard(element)
+    don't raise KeyError if item not found
+    remove the element if found
+    
+.clear()
+    delete all set elements
+    
+    
+`in` can test if an element exists within a set
+`not in` tests if an element doesn't exist within a set
+
+`for item in set:` loops through the collection
+
+
+* Set union
+
+Return a new set that contains all elements from both sets (discards duplicates)
+
+set1.union(set2)
+
+set1 | set2
+
+* Set intersection
+
+Returns a new set that contains only elements found in both sets. (discards duplicates)
+
+set1.intersection(set2)
+
+set1 & set2
+
+* Set difference
+
+Returns a new set that contains only elements from set1 that are not present within both sets. (discards duplicates)
+
+```sql
+-- kinda, i forgot if this is the syntax or no
+SELECT set1.*
+FROM set1, set2
+OUTER JOIN set2;
+```
+
+set1.difference(set2)
+
+set1 - set2
+
+* Set symmetric difference
+
+Returns a set that contains only elements (from set1 and set2) that aren't shared by both sets. (discards duplicates)
+
+set1.symmetric_difference(set2)
+
+set1 ^ set2
+
+```sql
+-- i think:
+SELECT *
+FROM set1, set2
+OUTER JOIN set2;
+```
+
+
+* Subsets
+
+Set A is a subset of Set B if all elements in Set A are included in Set B
+
+Determine if Set A is a subset of Set B
+
+setA.issubset(setB)
+
+setA <= setB
+
+* Supersets
+
+Set B is a superset of Set A if all elements in Set A are included in Set B
+
+Determine if Set B is a superset of Set A
+
+setB.issuperset(setA)
+
+setB >= setA
+
+* Set Comprehensions
+
+Enclosed in {}, not {}
+
+[?] How does python determine set comprehension vs dict comprehension?
+
+```py
+set1 = {[1,2,3,4,30]}
+# Copy a set
+set2 = {element for element in set1}
+
+# Implement a check. Check always appears at the end
+set3 = {num for num in set1 if num < 10}
+```
+
+# Serializing objects
+
