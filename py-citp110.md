@@ -293,3 +293,42 @@ set3 = {num for num in set1 if num < 10}
 
 # Serializing objects
 
+Serialize an object into a stream of bytes for easy storage
+
+Pickle: Seralizer
+
+    import pickle
+    open a file to write binary to
+    serialize data via pickle.dump(object,file_object)
+    write the binary data to the file
+    close the file
+    
+    profit
+    
+You can dump multiple times to a single file.
+
+
+with open('file.txt', 'wb') as file_object:
+    ...
+    
+# Deserialize objects
+
+Pickle: DeSeralizer
+    import pickle
+    open a file to read binary from
+    rehydrate the object data via pickle.load(file)
+    close the file
+    
+    profit
+    
+You can unpickle multiple objects from one file.
+
+with open('data', 'rb') as file_object:
+    object = pickle.load(file_object)
+    
+    
+# To learn more about:
+
+SQL
+
+issubset, issuperser
