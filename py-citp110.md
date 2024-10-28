@@ -332,3 +332,8 @@ with open('data', 'rb') as file_object:
 SQL
 
 issubset, issuperser
+
+# Classes & OOP basics
+
+
+
