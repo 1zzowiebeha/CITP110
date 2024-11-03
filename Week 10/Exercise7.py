@@ -174,6 +174,7 @@ class CommandSystem:
         else:
             print("Could not find existing employee data.\nNew empty db created.")
             self._loaded_employee_db = []
+            self._saved_employee_virtual_db = []
     
 
 if __name__ == "__main__":
