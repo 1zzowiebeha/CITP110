@@ -7,8 +7,8 @@ def validate_argument_types(func: Callable) -> None:
     def wrapper(*args, **kwargs):
         signature = inspect.signature(func)
         
-        for param, value in signature.parameters.items():
-            print(param, value)
+        #for param, value in signature.parameters.items():
+        #    print(param, value)
             
         func(*args, **kwargs)
     
