@@ -51,11 +51,9 @@ class CommandSystem:
         self._load_data()
         
         # Keep track of employee changes (private)
-        # created
-        # deleted
-        # updated?
+        # created, deleted, updated
         # All changes staged for _loaded_employee_db (unsaved changeset)
-        # Currently not in use
+        # To implement...
         self._employee_db_change_set = []
     
     def interpret_command(self, user_input: str):
@@ -110,11 +108,9 @@ class CommandSystem:
                         job_title: str, department: str) -> Employee:
         """Create an employee."""
 
-        # make id optional and implement this in the future:
-        # query the db for highest id and set new employee id to be one higher
-        # too much work for a simple app like this though
-        #if id is None:
-        #    get
+        # To implement:
+        # Optional ID. If omitted, create an employee with an id
+        #       that is one more than the highest ID in the database.
         
         employee = Employee(name, id, department, job_title)
         self._employee_db_change_set.append(('create', employee))
@@ -141,6 +137,8 @@ class CommandSystem:
     def save_state(self):
         """Serialize changes."""
         with open(self.db_file_path, 'wb') as file_object:
+            # When changesets are implemented,
+            # Apply all changesets upon save?
             # Eventually make it so the changeset db
             #   is what syncs to the virtual employee db.
             # The user can pick and choose what changes to apply to the virtual db.
@@ -169,7 +167,7 @@ class CommandSystem:
                 self._loaded_employee_db = pickle.load(file_object, encoding="UTF-8")
                 # Virtual _loaded_employee_db (unsaved representattion of applied changes)
                 # Just a list of employee objects.
-                # Make a copy instead of direct reference to loaded db contents
+                # Creates a copy instead of a direct reference to loaded db contents
                 self._saved_employee_virtual_db = self._loaded_employee_db[:]
         else:
             print("Could not find existing employee data.\nNew empty db created.")
