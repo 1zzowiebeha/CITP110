@@ -1,7 +1,5 @@
 """Exercise #3 from chapter 11 of the textbook."""
 
-# name, address, telephone number - Person
-# Customer - customer number, newsletter_subscriber
 
 class Person:
     def __init__(self, name: str, address: str, telephone_number: int) -> None:
