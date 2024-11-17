@@ -339,3 +339,23 @@ issubset, issuperser
 
 Base class - Superclass
 Derived class (child class) - Subclass
+
+
+When we create an __init__ constructor in a subclass,
+    we are overriding the superclass's __init__.
+    
+Polymorphism / Ducktyping allow us to access the same attributes/methods
+    for both the base class and child class.
+    
+In C#, it's a bit more complex as casting achieves polymorphism rather than
+    Duck typing.
+    
+Check for true Polymorphism rather than just Ducktyping
+`isinstance(object, class)`
+
+Dependency Injection & Design Patterns are epic
+
+DI - "Has A"
+Polymorphism - "Is A"
+
+"Has A" can be more flexible than Inheritance/Polymorphism
