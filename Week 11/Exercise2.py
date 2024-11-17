@@ -1,6 +1,5 @@
 """Exercise #2 from chapter 11 of the textbook."""
 
-# Supervisor - salary, yearly bonus, production bonus, get_w2
 
 class ShiftSupervisor:
     def __init__(self, name: str, salary: int, yearly_bonus: int) -> None:
