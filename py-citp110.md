@@ -337,3 +337,5 @@ issubset, issuperser
 
 
 
+Base class - Superclass
+Derived class (child class) - Subclass
