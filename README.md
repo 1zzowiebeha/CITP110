@@ -1,8 +1,8 @@
-# CITP110 files
+# CITP110 - Intro to Python
 
 Welcome.
 
-This is proof of iteration for my Lansing Community College - CIP110 class assignments.
+This is proof of iteration for my *CIP110 - Intro to Python* class assignments at LCC.
 
 At commits where I would normally squash previous commits
 into one, I will add a note in the commit body.
