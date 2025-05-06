@@ -2,7 +2,7 @@
 
 Welcome.
 
-This is proof of iteration for my *CIP110 - Intro to Python* class assignments at LCC.
+This is proof of iteration for my LCC *CIP110 - Intro to Python* class assignments.
 
 At commits where I would normally squash previous commits
 into one, I will add a note in the commit body.
